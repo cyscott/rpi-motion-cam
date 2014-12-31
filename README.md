@@ -6,7 +6,7 @@ Todo: Update the motion_cam.c to write files to the /var/www/img folder. Current
 
 Raspberry Pi Motion Cam
 ----
-A motion activated camera for Raspberry Pi, based on the [Motion Sensing Camera](https://www.youtube.com/watch?v=nWYujjsWb_A) project from @misperry.
+A motion activated camera for Raspberry Pi, based on the [Motion Sensing Camera](https://www.youtube.com/watch?v=nWYujjsWb_A) project from [@misperry](http://www.twitter.com/misperryee).
 
 This is a quick afternoon project, a bit frankensteined together but hopefully it'll get you 90% of the way. 
 
