@@ -55,7 +55,7 @@ Now you'll need to copy the files under the `web` folder found in this repo:
    sudo cp web/index.php /var/www/index.php
    sudo cp web/css/gallery.css /var/www/css/gallery.css
 ```
-Your web server should be up and running. Head over to [http://localhost/index.php](http://localhost/index.php) to verify.
+Your web server should be up and running. Head over to [http://localhost/index.php](http://localhost/index.php) to verify. If you're on a network, you should be able to access this server via its local IP (for example 192.168.1.123) or for the brave, you can set a hostname. 
 
 **Creating the app**
 
