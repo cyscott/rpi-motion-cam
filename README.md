@@ -26,7 +26,7 @@ Creating the Project
 --------
 Since we'll be using a webserver to view the images, we will set that up first.
 
-** Setting up the web server **
+**Setting up the web server**
 
 We use Apache2 on the Raspberry Pi to be able to serve up the images taken with the camera.
 
