@@ -18,6 +18,7 @@ Hardware
 * [Radioshack Passive Infared (PIR) Sensor](http://www.radioshack.com/radioshack-passive-infrared-sensor/2760347.html)
 
 *Connecting the PIR Sensor*
+
 The PIR sensor is extremely simple, with just a few pins to worry about: VCC / GND / OUT.
 
 For beginners, you can find the corresponding GPIO pins via the [documentation](http://www.raspberrypi.org/documentation/usage/gpio/)
