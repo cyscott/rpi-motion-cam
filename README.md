@@ -6,20 +6,24 @@ Raspberry Pi Motion Cam
 ----
 A motion activated camera for Raspberry Pi, based on the [Motion Sensing Camera](https://www.youtube.com/watch?v=nWYujjsWb_A) project from @misperry.
 
+Repo setup:
+* /web: this folder contains an index.php with a stylesheet to make your project look nice. It will be copied to your webserver (setup instructions below).
+* motion_cam.c: the file that controls the camera based on the infared sensor
+
 Instructions below based on our current setup, your mileage may vary.
 
 Hardware
 -----
-* Raspberry Pi Model B
-* Radioshack PIR Sensor
+* [Raspberry Pi Model B](http://www.raspberrypi.org/products/model-b/)
+* [Radioshack Passive Infared (PIR) Sensor](http://www.radioshack.com/radioshack-passive-infrared-sensor/2760347.html)
 
 *Connecting the PIR Sensor*
-The PIR sensor is extremely simple, with just a few pins to worry about: VCC / GND / OUT. 
+The PIR sensor is extremely simple, with just a few pins to worry about: VCC / GND / OUT.
 
 For beginners, you can find the corresponding GPIO pins via the [documentation](http://www.raspberrypi.org/documentation/usage/gpio/)
 
-* VCC: Connect to either the 3.5V or a 5V GPIO pin. 
-* GND: Connect to a Ground pin. 
+* VCC: Connect to either the 3.5V or a 5V GPIO pin.
+* GND: Connect to a Ground pin.
 * OUT: Connect to an input/output pin. In this code example, we used pin 8.
 
 Creating the Project
@@ -34,7 +38,7 @@ A great guide on setting up Apache2 is avialable on [Instructables](http://www.i
 
 By default, your website will be serving up from `/var/www`
 
-To match this repos setup, create 2 new folders via 
+To match this repos setup, create 2 new folders via
 ```
    sudo mkdir /var/www/img
    sudo mkdir /var/www/css
@@ -43,7 +47,7 @@ To match this repos setup, create 2 new folders via
 Now you'll need to copy the files under the `web` folder found in this repo:
 
 ```
-   sudo cp web/index.php /var/www/index.php 
+   sudo cp web/index.php /var/www/index.php
    sudo cp web/css/gallery.css /var/www/css/gallery.css
 ```
 Your web server should be up and running. Head over to [http://localhost/index.php](http://localhost/index.php) to verify.
@@ -54,7 +58,7 @@ The app is a C project, so you'll need to install and build the bcm2835 header l
 
 Full instructions available at [airspayce.com](http://www.airspayce.com/mikem/bcm2835/), but if you're in a hurry follow the steps below
 
-``` 
+```
    wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.38.tar.gz
    tar zxvf bcm2835-1.xx.tar.gz
    cd bcm2835-1.xx
@@ -72,4 +76,3 @@ Now,  build the app from the file in this project `motion_cam.c`
 ```
 
 That's it. Your camera should be snapping pics and saving them to your local webserver.
-
