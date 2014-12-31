@@ -7,7 +7,7 @@
 int main(int argc, char **argv)
 {
   if(!bcm2835_init()) {
-    printf("Oh shit. Library bcm2835 not loaded.");
+    printf("Library bcm2835 not loaded.");
     return 1;
   }
 
